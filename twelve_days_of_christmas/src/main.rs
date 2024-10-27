@@ -1,50 +1,43 @@
 fn main() {
     for day in 1..=12 {
-        let ordinal = match day {
-            1  => String::from("first"),
-            2  => String::from("second"),
-            3  => String::from("third"),
-            4  => String::from("fourth"),
-            5  => String::from("fifth"),
-            6  => String::from("sixth"),
-            7  => String::from("seventh"),
-            8  => String::from("eigth"),
-            9  => String::from("ninth"),
-            10 => String::from("tenth"),
-            11 => String::from("eleventh"),
-            12 => String::from("twelfth"),
-            _  => String::from("error")
+        match day {
+            1  => println!("On the first day of Christmas, my true love gave to me:"),
+            2  => println!("On the second day of Christmas, my true love gave to me:"),
+            3  => println!("On the third day of Christmas, my true love gave to me:"),
+            4  => println!("On the fourth day of Christmas, my true love gave to me:"),
+            5  => println!("On the fifth day of Christmas, my true love gave to me:"),
+            6  => println!("On the sixth day of Christmas, my true love gave to me:"),
+            7  => println!("On the seventh day of Christmas, my true love gave to me:"),
+            8  => println!("On the eigth day of Christmas, my true love gave to me:"),
+            9  => println!("On the ninth day of Christmas, my true love gave to me:"),
+            10 => println!("On the tenth day of Christmas, my true love gave to me:"),
+            11 => println!("On the eleventh day of Christmas, my true love gave to me:"),
+            12 => println!("On the twelfth day of Christmas, my true love gave to me:"),
+            _  => println!("Somehow got an integer outside the range 1..=12")
         };
 
-        println!("On the {ordinal} day of Christmas, my true love gave to me:");
-
         for day_gift in (1..=day).rev() {
-            let gift = match day_gift {
-                1  => String::from("A partridge in a pear tree."),
-                2  => String::from("Two turtle doves"),
-                3  => String::from("Three French hens"),
-                4  => String::from("Four calling birds"),
-                5  => String::from("Five golden rings"),
-                6  => String::from("Six geese a laying"),
-                7  => String::from("Seven swans a swimming"),
-                8  => String::from("Eight mades a milking"),
-                9  => String::from("Nine ladies dancing"),
-                10 => String::from("Ten lords a leaping"),
-                11 => String::from("Eleven pipers piping"),
-                12 => String::from("Twelve drummers drumming"),
-                _  => String::from("error")
+            match day_gift {
+                1  => { 
+                        match day {
+                            1 => println!("A partridge in a pear tree."),
+                            _ => println!("And a partridge in a pear tree.")
+                        }
+                        
+                },
+                2  => println!("Two turtle doves,"),
+                3  => println!("Three French hens,"),
+                4  => println!("Four calling birds,"),
+                5  => println!("Five golden rings,"),
+                6  => println!("Six geese a laying,"),
+                7  => println!("Seven swans a swimming,"),
+                8  => println!("Eight mades a milking,"),
+                9  => println!("Nine ladies dancing,"),
+                10 => println!("Ten lords a leaping,"),
+                11 => println!("Eleven pipers piping,"),
+                12 => println!("Twelve drummers drumming,"),
+                _  => println!("Somehow got an integer outside the range 1..=12")
             };
-
-            if day > 1 && day_gift == 1 {
-                print!("And ");
-                println!("{}", gift.replace("A", "a"));
-            }
-            else if day > 1 && day_gift > 1 {
-                println!("{gift},");
-            }
-            else {
-                println!("{gift}");
-            }
         }
 
         println!("----"); 

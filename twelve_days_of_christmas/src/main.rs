@@ -20,8 +20,9 @@ fn main() {
             match day_gift {
                 1  => { 
                         match day {
-                            1 => println!("A partridge in a pear tree."),
-                            _ => println!("And a partridge in a pear tree.")
+                            1      => println!("A partridge in a pear tree."),
+                            2..=12 => println!("And a partridge in a pear tree."),
+                            _      => println!("Somehow got an integer outside the range 1..=12")
                         }
                         
                 },

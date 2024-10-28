@@ -1,20 +1,23 @@
 fn main() {
     for day in 1..=12 {
+
+        print!("On the ");
         match day {
-            1  => println!("On the first day of Christmas, my true love gave to me:"),
-            2  => println!("On the second day of Christmas, my true love gave to me:"),
-            3  => println!("On the third day of Christmas, my true love gave to me:"),
-            4  => println!("On the fourth day of Christmas, my true love gave to me:"),
-            5  => println!("On the fifth day of Christmas, my true love gave to me:"),
-            6  => println!("On the sixth day of Christmas, my true love gave to me:"),
-            7  => println!("On the seventh day of Christmas, my true love gave to me:"),
-            8  => println!("On the eigth day of Christmas, my true love gave to me:"),
-            9  => println!("On the ninth day of Christmas, my true love gave to me:"),
-            10 => println!("On the tenth day of Christmas, my true love gave to me:"),
-            11 => println!("On the eleventh day of Christmas, my true love gave to me:"),
-            12 => println!("On the twelfth day of Christmas, my true love gave to me:"),
-            _  => println!("Somehow got an integer outside the range 1..=12")
+            1  => print!("first"),
+            2  => print!("second"),
+            3  => print!("third"),
+            4  => print!("fourth"),
+            5  => print!("fifth"),
+            6  => print!("sixth"),
+            7  => print!("seventh"),
+            8  => print!("eigth"),
+            9  => print!("ninth"),
+            10 => print!("tenth"),
+            11 => print!("eleventh"),
+            12 => print!("twelfth"),
+            _  => print!("Somehow got an integer outside the range 1..=12")
         };
+        println!(" day of Christmas, my true love gave to me:");
 
         for day_gift in (1..=day).rev() {
             match day_gift {
@@ -40,7 +43,6 @@ fn main() {
                 _  => println!("Somehow got an integer outside the range 1..=12")
             };
         }
-
         println!("----"); 
     }
 }

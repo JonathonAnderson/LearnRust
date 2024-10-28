@@ -1,6 +1,5 @@
 fn main() {
     for day in 1..=12 {
-
         print!("On the ");
         match day {
             1  => print!("first"),

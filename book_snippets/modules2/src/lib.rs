@@ -27,6 +27,10 @@ mod back_of_house {
 
     // Each function implemented on the struct must be pub to be accessible by parent
     impl Breakfast {
+        // Because seasonal_fruit is private, a constructor method is needed to return 
+        // a configured Breakfast struct. Otherwise, there is no war for the parent
+        // to supply a value for seasonal_fruit, and it won't compile because there is 
+        // no null and we're not using Option<T>
         pub fn summer(toast: &str) ->  Breakfast {
             Breakfast {
                 toast: toast.to_owned(),
